@@ -13,7 +13,7 @@ function stopSliding(e) {
         document.getElementById('nav').classList.remove('is-hide')
     }
     else {
-        if (e.clientY - begin_Y < 60) {
+        if (e.clientY - begin_Y < 0) {
             // console.log('上滑')
             document.getElementById('nav').classList.add('is-hide')
         }
