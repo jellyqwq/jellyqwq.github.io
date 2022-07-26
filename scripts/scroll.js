@@ -14,7 +14,7 @@ slider.addEventListener('touchmove', (event) => {
         document.getElementById('nav').classList.remove('is-hide')
     }
 
-    if (moveDirection && moveCount > 10) {
+    if (moveDirection && moveCount > 5) {
         move_num = event.changedTouches[0].clientY - moveDirection;
         if (move_num > 0) {
             document.getElementById('nav').classList.remove('is-hide');

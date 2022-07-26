@@ -8,6 +8,9 @@ export const config = {
             child: []
         }
     ],
-    copyright: 'Jelly\'s blog'
+    copyright: {
+        name: 'Jelly\'s blog',
+        link: 'https://blog.jellyqwq.top/'
+    }
     
 }
