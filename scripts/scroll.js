@@ -1,35 +1,40 @@
 // 上滑隐藏导航栏, 下滑显示导航栏
+// 第一种
+// 检测touchmove的坐标
+const slider = document.getElementById('main');
+let moveDirection = null;
+let moveCount = 0;
 
-// 屏幕滑动事件
-function beginSliding(e) {
-    slider.setPointerCapture(e.pointerId);
-    begin_Y = e.clientY
-}
-  
-function stopSliding(e) {
-    event.preventDefault();
-    if (e.clientY - begin_Y > 0) {
-        // console.log('下滑')
+slider.addEventListener('touchmove', (event) => {
+    // console.log(event.type)
+    if (event.type == 'touchmove') {
+        moveCount ++;
+    }
+    
+    if (slider.getBoundingClientRect().top == 60) {
         document.getElementById('nav').classList.remove('is-hide')
     }
-    else {
-        if (e.clientY - begin_Y < 0) {
-            // console.log('上滑')
+
+    if (moveDirection && moveCount > 10) {
+        move_num = event.changedTouches[0].clientY - moveDirection
+        if (move_num > 0) {
+            console.log('下滑中')
+            document.getElementById('nav').classList.remove('is-hide')
+        }
+        else if (move_num < 0) {
+            console.log('上滑中')
             document.getElementById('nav').classList.add('is-hide')
         }
     }
-    slider.releasePointerCapture(e.pointerId);
-}
+    else {
+        moveDirection = event.changedTouches[0].clientY
+    }
+})
 
-const slider = document.getElementsByTagName('body')[0];
-var begin_Y = null;
-var end_Y = null;
 
-slider.onpointerdown = beginSliding;
-slider.onpointermove = stopSliding;
 
 // 滚轮事件
-addEventListener('wheel', (event) => {
+document.getElementById('main').addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
         // console.log('下滑中')
         document.getElementById('nav').classList.add('is-hide')
@@ -41,4 +46,3 @@ addEventListener('wheel', (event) => {
         }
     }
 });
-document.getElementsByTagName('html').onwheel = (event) => {}
