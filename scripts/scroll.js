@@ -16,15 +16,16 @@ slider.addEventListener('touchmove', (event) => {
     }
 
     if (moveDirection && moveCount > 10) {
-        move_num = event.changedTouches[0].clientY - moveDirection
+        move_num = event.changedTouches[0].clientY - moveDirection;
         if (move_num > 0) {
-            console.log('下滑中')
-            document.getElementById('nav').classList.remove('is-hide')
+            console.log('下滑中');
+            document.getElementById('nav').classList.remove('is-hide');
         }
         else if (move_num < 0) {
-            console.log('上滑中')
-            document.getElementById('nav').classList.add('is-hide')
+            console.log('上滑中');
+            document.getElementById('nav').classList.add('is-hide');
         }
+        moveCount = 0;
     }
     else {
         moveDirection = event.changedTouches[0].clientY
