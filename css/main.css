@@ -21,7 +21,7 @@ a:hover {
     left: 0;
 	right: 0;
 	top: 0;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     line-height: 60px;
     transition: transform .5s;
@@ -34,7 +34,7 @@ a:hover {
 }
 /* 页面主体 */
 .main {
-    max-width: 800px;
+    max-width: 760px;
     display: flex;
     flex-direction: column;
     margin: 60px auto;
@@ -91,6 +91,7 @@ a:hover {
 }
 
 .bottom-bar {
-
+    text-align: center;
+    padding: 20px;
     background-color: rgb(2, 248, 248)
 }

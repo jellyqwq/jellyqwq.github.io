@@ -7,7 +7,7 @@ document.getElementsByTagName('title')[0].innerText = config.title
 document.getElementsByClassName('site-title')[0].innerText = config.title
 
 // bottom info insert
-document.getElementById('bottom-info').innerText = config.copyright
+document.getElementById('copyright').innerText = config.copyright
 
 
 
