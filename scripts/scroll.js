@@ -6,7 +6,6 @@ let moveDirection = null;
 let moveCount = 0;
 
 slider.addEventListener('touchmove', (event) => {
-    // console.log(event.type)
     if (event.type == 'touchmove') {
         moveCount ++;
     }
@@ -18,11 +17,9 @@ slider.addEventListener('touchmove', (event) => {
     if (moveDirection && moveCount > 10) {
         move_num = event.changedTouches[0].clientY - moveDirection;
         if (move_num > 0) {
-            console.log('下滑中');
             document.getElementById('nav').classList.remove('is-hide');
         }
-        else if (move_num < 0) {
-            console.log('上滑中');
+        else if (move_num < 0 && slider.getBoundingClientRect().top < 0) {
             document.getElementById('nav').classList.add('is-hide');
         }
         moveCount = 0;
@@ -36,13 +33,11 @@ slider.addEventListener('touchmove', (event) => {
 
 // 滚轮事件
 document.getElementById('main').addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-        // console.log('下滑中')
+    if (event.deltaY > 0 && slider.getBoundingClientRect().top < 0) {
         document.getElementById('nav').classList.add('is-hide')
     }
     else {
         if (event.deltaY < 0) {
-            // console.log('上滑中')
             document.getElementById('nav').classList.remove('is-hide')
         }
     }
