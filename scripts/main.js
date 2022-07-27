@@ -11,3 +11,5 @@ document.getElementById('copyright-name').innerText = config.copyright.name
 document.getElementById('copyright-link').href = config.copyright.link
 
 
+
+
