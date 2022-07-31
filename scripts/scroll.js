@@ -11,16 +11,16 @@ slider.addEventListener('touchmove', (event) => {
     }
     
     if (slider.getBoundingClientRect().top == 60) {
-        document.getElementById('nav').classList.remove('is-hide')
+        document.getElementsByTagName('header')[0].classList.remove('is-hide')
     }
 
     if (moveDirection && moveCount > 5) {
         move_num = event.changedTouches[0].clientY - moveDirection;
         if (move_num > 0) {
-            document.getElementById('nav').classList.remove('is-hide');
+            document.getElementsByTagName('header')[0].classList.remove('is-hide');
         }
         else if (move_num < 0 && slider.getBoundingClientRect().top < 0) {
-            document.getElementById('nav').classList.add('is-hide');
+            document.getElementsByTagName('header')[0].classList.add('is-hide');
         }
         moveCount = 0;
     }
@@ -34,11 +34,11 @@ slider.addEventListener('touchmove', (event) => {
 // 滚轮事件
 document.getElementById('main').addEventListener('wheel', (event) => {
     if (event.deltaY > 0 && slider.getBoundingClientRect().top < 0) {
-        document.getElementById('nav').classList.add('is-hide')
+        document.getElementsByTagName('header')[0].classList.add('is-hide')
     }
     else {
         if (event.deltaY < 0) {
-            document.getElementById('nav').classList.remove('is-hide')
+            document.getElementsByTagName('header')[0].classList.remove('is-hide')
         }
     }
 });

@@ -11,17 +11,55 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500;600&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="/css/multinav.css">
 </head>
 <body>
     <!-- 需要一个导航栏  侧边|置顶型 -->
-    <div id="nav">
-        <ul>
-            <li>
-                <a href="/"><p>首页</p></a>
-            </li>
-        </ul>
-    </div>
+    <header>
+        <div class="nav-btn">
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-link">
+                        <a href="">首页</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">产品</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link"><a href="">自由</a></li>
+                                <li class="dropdown-link"><a href="">平等</a></li>
+                                <li class="dropdown-link">
+                                    <a href="">文明</a>
+                                    <div class="dropdown second">
+                                        <ul>
+                                            <li class="dropdown-link"><a href="">省</a></li>
+                                            <li class="dropdown-link"><a href="">镇</a></li>
+                                            <li class="dropdown-link"><a href="">县</a></li>
+                                            <li class="dropdown-link"><a href="">村</a></li>
+                                            <li class="dropdown-link"><a href="">户</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown-link"><a href="">和谐</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">展示</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">关于</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
 
     <div class="main" id="main">
         <!-- 镇站之宝 -->
@@ -52,7 +90,7 @@
     <!-- <script type="module" src="/config.js" async></script> -->
     <script type="module" src="/scripts/main.js"></script>
     <script src="/scripts/scroll.js"></script>
-    <script type="module" src="/scripts/motto.replace.js"></script>
-
+    <script type="module" src="/scripts/motto.js"></script>
+    <script src="/scripts/nav.js"></script>
 </body>
 </html>
