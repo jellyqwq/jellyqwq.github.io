@@ -1,13 +1,26 @@
 const navLinks = document.getElementsByClassName('nav-links')[0]
+const navHideBox = document.getElementById('nav-box-1')
 
-onresize = () => {
-    let navWidth = document.getElementsByClassName('nav-links')[0].offsetWidth
+let navWidth = navLinks.offsetWidth
+let screenWith = window.innerWidth
+
+if (navWidth >= screenWith) {
+    navHideBox.style.display = 'none'
+}
+else {
+    navHideBox.style.display = 'flex'
+}
+
+onresize = (event) => {
+    event.preventDefault();
+    let navWidth = navLinks.offsetWidth
     let screenWith = window.innerWidth
 
     if (navWidth >= screenWith) {
-        navLinks.classList.add('nav-btn-hide')
+        navHideBox.style.display = 'none'
     }
     else {
-        navLinks.classList.remove('nav-btn-hide')
+        navHideBox.style.display = 'flex'
     }
 }
+
