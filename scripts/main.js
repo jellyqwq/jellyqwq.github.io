@@ -99,5 +99,4 @@ function rescircle(list) {
     } 
 }
 rescircle(outputList)
-console.log('alstr:', alstr)
 document.getElementById('nav-box-1').innerHTML = alstr
