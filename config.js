@@ -9,11 +9,11 @@ export const config = {
         {
             name: '归档',
             href: '/',
-            child: []
+            child: null
         },
         {
             name: '管理',
-            href: null,
+            href: '/',
             child: [
                 {
                     name: '宝塔',
@@ -29,45 +29,45 @@ export const config = {
         },
         {
             name: '杂项',
-            href: null,
+            href: '/',
             child:[
                 {
                     name: '闲聊',
                     href: '/',
-                    child: null
+                    child: []
                 },
                 {
                     name: '开发',
-                    href: null,
+                    href: [],
                     child: [
                         {
                             name: 'blog',
                             href: '/',
-                            child: null
+                            child: []
                         },
                         {
                             name: 'bot',
                             href: '/',
-                            child: null
+                            child: []
                         },
                         {
                             name: '我的所学',
-                            href: null,
+                            href: [],
                             child: [
                                 {
                                     name: 'python',
                                     href: '/',
-                                    child: null
+                                    child: []
                                 },
                                 {
                                     name: 'javascript',
                                     href: '/',
-                                    child: null
+                                    child: []
                                 },
                                 {
                                     name: 'golang',
                                     href: '/',
-                                    child: null
+                                    child: []
                                 }
                             ]
                         }

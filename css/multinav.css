@@ -1,5 +1,7 @@
+:root {
+    --nav-label-width: 90px;
+}
 header {
-    /* display: inline-flex; */
     line-height: 44px;
     height: 44px;
     position: fixed;
@@ -31,10 +33,12 @@ header li {
 .nav-link {
     position: relative;
 }
+
+
 .nav-link > a {
     display: inline-block;
     line-height: 44px;
-    width: 88px;
+    width: var(--nav-label-width);
     color: rgb(0, 0, 0);
     transition: .5s;
 }
@@ -68,7 +72,7 @@ header li {
     display: flex;
     color: rgb(0, 0, 0);
     background-color: rgba(41, 255, 205, 0.614);
-    width: 88px;
+    width: var(--nav-label-width);
     line-height: 44px;
     align-items: center;
     justify-content: center;
@@ -90,7 +94,7 @@ header li {
     /* top计算 */
     top: 0;
     /* left计算 */
-    left: 88px;
+    left: var(--nav-label-width);
     transform: translateX(-10px);
     opacity: 0;
     width: 100%;

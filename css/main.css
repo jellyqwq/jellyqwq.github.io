@@ -22,7 +22,8 @@ a:hover {
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    margin: 60px auto;
+    margin: 44px auto;
+    margin-bottom: 0;
     justify-content: center;
 
 }
@@ -38,16 +39,12 @@ a:hover {
     line-height: auto;
     justify-content: center;
     min-width: 80px;
-    max-width: 120px;
+    max-width: 100px;
     text-align: center;
     height: auto;
     margin: 0 auto;
-    padding: 3px 3px 0 3px;
+    /* padding: 0px 3px 0 3px; */
     /* background-color: rgb(74, 30, 169); */
-}
-.avatar a {
-    padding-bottom: 24px;
-    /* background-color: rgb(169, 30, 30); */
 }
 .avatar img {
     width: 100%;
@@ -60,8 +57,8 @@ a:hover {
 }
 .site-title {
     display: inline-block;
-    padding: 20px 0px 8px 0;
-    font-size: 1.8rem;
+    padding: 5px 0px 8px 0;
+    font-size: 1.2rem;
     font-weight: 600;
     background: linear-gradient(-45deg, #fe7575, #fff34d, #75feba, #47f1fa, #6978ff, #d478ff);
     background-size: 1000% 1000%;
@@ -90,7 +87,8 @@ a:hover {
     display: inline-block;
     flex-direction: column;
     text-align: center;
-    line-height: 40px
+    line-height: 40px;
+    font-size: .75rem;
 }
 
 #container {
@@ -107,7 +105,7 @@ a:hover {
 
 .bottom-bar {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-weight: 800;
     background-color: rgb(2, 248, 248)
 }
