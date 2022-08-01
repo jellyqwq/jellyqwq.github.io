@@ -10,7 +10,7 @@ document.getElementsByClassName('site-title')[0].innerText = config.title
 document.getElementById('copyright-name').innerText = config.copyright.name
 document.getElementById('copyright-link').href = config.copyright.link
 
-console.log(config.navigation)
+// 多级导航生成
 let outputList = config.navigation
 let oneLock = false
 let twoLock = false
@@ -54,7 +54,7 @@ function rescircle(list) {
             for (var i = 0; i < containerList.length; i++) {
                 tempStr += containerList[i]
             }
-            alstr = `<div class="nav-links"><ul>${tempStr}</ul></div>`
+            alstr = `<ul>${tempStr}</ul>`
         }
     }
     else {
